@@ -1,0 +1,326 @@
+/* BODY general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffc6d9; /* rosa pastel muy suave */
+  color: #6b4c4c; /* marrón grisáceo para texto, suave */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor global del header para centrar texto */
+.contenedor-global {
+  text-align: center;
+  padding: 30px 20px 10px 20px;
+  background-color: #ff96c4; /* rosa pastel clarito */
+  box-shadow: 0 3px 8px rgba(255, 182, 193, 0.15); /* sombra rosada suave */
+  border-radius: 0 0 25px 25px;
+  margin-bottom: 40px;
+}
+
+/* Título principal centrado y suave */
+.bienvenida {
+  font-size: 2.6rem;
+  margin: 0;
+  font-weight: 700;
+  color: #ffffff; /* rosado pastel medio */
+  text-shadow: 0 2px 5px rgba(244, 168, 185, 0.35);
+}
+
+/* Subtítulo */
+header h2 {
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 1.6rem;
+  color: #ffdce4; /* rosa medio más oscuro */
+  font-style: italic;
+}
+
+/* Contenedor principal centrado y con fondo claro */
+.contenedor-principal {
+  max-width: 720px;
+  margin: 0 auto 60px auto;
+  padding: 25px 30px 40px 30px;
+  background-color: #fff8fa; /* rosa muy muy claro, casi blanco */
+  border-radius: 30px;
+  box-shadow: 0 8px 30px rgba(255, 182, 193, 0.1); /* sombra rosada muy suave */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Sección formulario */
+.formulario h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffb4c6; /* rosa pastel */
+  margin-bottom: 25px;
+  letter-spacing: 1.3px;
+}
+
+/* Formulario: flex vertical y espaciamiento */
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Etiquetas */
+.formulario label {
+  font-weight: 600;
+  color: #a86b6b; /* marrón rosado suave */
+  font-size: 1rem;
+}
+
+/* Inputs y selects */
+.formulario input[type="text"],
+.formulario input[type="time"],
+.formulario select {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 18px;
+  border: 2px solid #f3c1ce; /* borde rosado pastel claro */
+  background-color: #fff9fa;
+  color: #6b4c4c;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="time"]:focus,
+.formulario select:focus {
+  border-color: #f4a8b9;
+  outline: none;
+  box-shadow: 0 0 10px rgba(244, 168, 185, 0.4);
+}
+
+/* Botón registrar */
+.formulario button[type="submit"] {
+  background-color: #ff96c4;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 14px;
+  font-size: 1.3rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(244, 168, 185, 0.6);
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.formulario button[type="submit"]:hover {
+  background-color: #ff96c4;
+}
+
+/* Botón volver dashboard */
+.boton-dashboard-container {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.btn-dashboard {
+  padding: 10px 22px;
+  background-color: #ff96c4;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(243, 193, 206, 0.5);
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dashboard:hover {
+  background-color: #f4a8b9;
+}
+
+/* Lista de suplementos */
+.lista h2 {
+  text-align: center;
+  color: #f4a8b9;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1.1px;
+}
+
+/* Tabla de suplementos */
+.tabla-suplementos {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-size: 1rem;
+  box-shadow: 0 4px 20px rgba(244, 168, 185, 0.1);
+}
+
+.tabla-suplementos thead tr {
+  background-color: #f3c1ce;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+.tabla-suplementos th,
+.tabla-suplementos td {
+  padding: 14px 18px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff8fa;
+  border-bottom: none;
+  color: #6b4c4c;
+  font-weight: 500;
+  border-radius: 12px;
+}
+
+.tabla-suplementos tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.tabla-suplementos tbody tr:hover td {
+  background-color: #fce7f0;
+}
+
+/* Botones editar y eliminar */
+.btn-editar,
+.eliminar {
+  background-color: #f4a8b9;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-editar:hover {
+  background-color: #d6838c;
+}
+
+.eliminar:hover {
+  background-color: #a75a66;
+}
+
+/* Mensajes si no hay suplementos */
+.lista p {
+  text-align: center;
+  font-style: italic;
+  color: #c998a3;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+/* Responsive para móviles */
+@media (max-width: 720px) {
+  .contenedor-principal {
+    margin: 20px 15px 40px 15px;
+    padding: 20px 20px 30px 20px;
+  }
+
+  .bienvenida {
+    font-size: 2rem;
+  }
+
+  header h2 {
+    font-size: 1.3rem;
+  }
+
+  .formulario h2,
+  .lista h2 {
+    font-size: 1.5rem;
+  }
+
+  .tabla-suplementos th,
+  .tabla-suplementos td {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .btn-editar,
+  .eliminar {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-dashboard {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+}
+/* Estilo para el formulario de editar suplemento */
+.contenedor {
+  max-width: 450px;
+  margin: 30px auto;
+  background-color: #ffe4e6; /* rosa suave */
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 192, 203, 0.6);
+  font-family: 'Arial', sans-serif;
+}
+
+.contenedor h2 {
+  text-align: center;
+  color: #d6336c; /* rosa fuerte */
+  margin-bottom: 20px;
+}
+
+.contenedor label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+  color: #6a1b4d;
+}
+
+.contenedor input[type="text"],
+.contenedor input[type="time"],
+.contenedor select {
+  width: 100%;
+  padding: 9px 12px;
+  margin-top: 5px;
+  border: 1px solid #dca7b9;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #4b254c;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contenedor input[type="text"]:focus,
+.contenedor input[type="time"]:focus,
+.contenedor select:focus {
+  border-color: #d6336c;
+  outline: none;
+}
+
+.contenedor button[type="submit"] {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background-color: #d6336c;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contenedor button[type="submit"]:hover {
+  background-color: #a72850;
+}
+
+.contenedor a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #d6336c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.contenedor a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,468 @@
+/* css/foro.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff0f6;
+    color: #4a4a4a;
+    margin: 0;
+    padding: 0 20px 40px 20px;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #f778b7;
+    color: white;
+    padding: 20px 20px 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 123, 189, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+#usuario-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#usuario-info img {
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+#usuario-info span {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+header form {
+    margin-top: 10px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+header select {
+    border-radius: 8px;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: white;
+    color: #f77cb9;
+    box-shadow: 0 2px 5px rgba(255, 102, 179, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+header select:hover {
+    background-color: #ffe6f0;
+}
+
+/* Formulario Crear Publicación */
+#crear-publicacion {
+    margin: 25px 0;
+    background-color: white;
+    border-radius: 14px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 10px rgba(255, 102, 179, 0.2);
+}
+
+#crear-publicacion textarea {
+    width: 100%;
+    min-height: 80px;
+    border: 2px solid #ff99cc;
+    border-radius: 10px;
+    padding: 12px;
+    resize: vertical;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+#crear-publicacion textarea:focus {
+    border-color: #ca2778;
+    outline: none;
+}
+
+#crear-publicacion input[type="file"] {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #ee91bf;
+    cursor: pointer;
+}
+
+#crear-publicacion button {
+    margin-top: 15px;
+    background-color: #ff6cb5;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 6px rgba(255, 51, 153, 0.4);
+}
+
+#crear-publicacion button:hover {
+    background-color: #cf3180;
+}
+
+/* Publicaciones */
+#publicaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Cada publicación */
+.publicacion {
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(255, 102, 179, 0.15);
+    padding: 20px 25px;
+    transition: box-shadow 0.3s ease;
+}
+
+.publicacion:hover {
+    box-shadow: 0 8px 20px rgba(255, 102, 179, 0.3);
+}
+
+.publicacion-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.publicacion-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ff66b3;
+    object-fit: cover;
+}
+
+.publicacion-header strong {
+    color: #ff3399;
+    font-size: 1.1rem;
+}
+
+.publicacion-header span {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #999999;
+    font-style: italic;
+}
+
+.publicacion-header form {
+    margin-left: 15px;
+}
+
+.publicacion-header form button {
+    background-color: #ff66b3;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.publicacion-header form button:hover {
+    background-color: #e0559e;
+}
+
+.publicacion p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    white-space: pre-wrap;
+    margin-bottom: 12px;
+}
+
+.imagen-publicacion {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(255, 102, 179, 0.25);
+    margin-bottom: 12px;
+}
+
+/* Reacciones */
+.reacciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.reacciones button {
+    background-color: #ff359a;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    box-shadow: 0 3px 6px rgba(255, 102, 179, 0.4);
+}
+
+.reacciones button:hover {
+    background-color: #ff6cb5;
+}
+
+.reacciones span {
+    font-weight: 600;
+    color: #ff3399;
+}
+
+/* Comentarios */
+.comentarios {
+    border-top: 1px solid #ff99cc;
+    padding-top: 15px;
+}
+
+.comentarios strong {
+    color: #ff3399;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.comentario {
+    background: #fff0f6;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(255, 102, 179, 0.15);
+}
+
+.comentario strong {
+    color: #d6336c;
+    font-size: 1rem;
+}
+
+.comentario span {
+    font-size: 0.8rem;
+    color: #b94f77;
+    margin-left: 6px;
+    font-style: italic;
+}
+
+.comentario p {
+    margin-top: 4px;
+    font-size: 0.95rem;
+    color: #444;
+    white-space: pre-wrap;
+}
+
+/* Formulario de respuesta */
+.formRespuesta {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formRespuesta textarea {
+    width: 100%;
+    resize: vertical;
+    border-radius: 8px;
+    border: 2px solid #ff99cc;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.formRespuesta textarea:focus {
+    outline: none;
+    border-color: #ff3399;
+}
+
+.formRespuesta button {
+    align-self: flex-end;
+    background-color: #ff3399;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 3px 6px rgba(255, 51, 153, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.formRespuesta button:hover {
+    background-color: #ff6cb5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #usuario-info {
+        margin-top: 10px;
+    }
+
+    header form {
+        justify-content: flex-start;
+        margin-top: 15px;
+    }
+}
+/* Estilo para mensajes de error en formularios */
+.error-message {
+  background-color: #f8d7da;  /* rojo suave de fondo */
+  color: #842029;             /* rojo oscuro para texto */
+  border: 1px solid #f5c2c7; /* borde rojo claro */
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Para que los botones se vean deshabilitados cuando se está enviando */
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(30%);
+  transition: opacity 0.3s ease;
+}
+
+/* Opcional: al pasar el mouse sobre botón habilitado */
+button:not([disabled]):hover {
+  background-color: #e06f8b; /* un rosa suave */
+  transition: background-color 0.3s ease;
+}
+
+/* Contenedor del formulario de edición */
+.editar-publicacion-form {
+  border: 1px solid #ff69b4;
+  background-color: #fff0f6;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+  max-width: 600px;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
+}
+
+/* Etiquetas */
+.editar-publicacion-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #ff6cb5;
+  font-size: 1rem;
+}
+
+/* Inputs y textarea */
+.editar-publicacion-form input[type="text"],
+.editar-publicacion-form textarea,
+.editar-publicacion-form input[type="file"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-bottom: 14px;
+  border: 1px solid #ff69b4;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.editar-publicacion-form input[type="text"]:focus,
+.editar-publicacion-form textarea:focus,
+.editar-publicacion-form input[type="file"]:focus {
+  border-color: #d6336c;
+  outline: none;
+  background-color: #fff0f6;
+}
+
+/* Texto de imagen actual */
+.editar-publicacion-form .imagen-actual {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/* Botones */
+.editar-publicacion-form .botones-editar {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.editar-publicacion-form button {
+  background-color: #ff6cb5;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editar-publicacion-form button:hover {
+  background-color: #e055a3;
+}
+
+.editar-publicacion-form button.cancelar {
+  background-color: #999;
+}
+
+.editar-publicacion-form button.cancelar:hover {
+  background-color: #666;
+}
+.btn-dashboard {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #e27ca4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-dashboard:hover {
+    background-color: #d15d8f;
+}
+.imagen-publicacion {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    object-fit: contain;
+}

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #fbeaff, #e8eaf6);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(248, 187, 208, 0.85);
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem 2rem;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    backdrop-filter: blur(6px);
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+.logo {
+    width: 90px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05) rotate(-3deg);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+    animation: slideDown 0.8s ease-out;
+}
+
+.frase-motivacional {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    font-style: normal;
+    color: #fffafc;
+    animation: fadeIn 2s ease;
+}
+
+.inicio {
+    flex-grow: 1;
+    text-align: center;
+    padding: 3rem 1rem;
+    animation: fadeIn 1.5s ease;
+}
+
+.inicio h2 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #aa4c8f;
+}
+
+.botones-inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    animation: fadeInUp 1.5s ease;
+}
+
+.botones-inicio button {
+    background: linear-gradient(135deg, #f48fb1, #f06292);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 300px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.botones-inicio button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+}
+
+.botones-inicio button:hover::after {
+    left: 100%;
+}
+
+.botones-inicio button:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #ec407a, #d81b60);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

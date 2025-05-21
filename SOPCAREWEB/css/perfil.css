@@ -1,0 +1,135 @@
+/* perfil.css */
+
+body {
+    background: #f9f4f1; /* beige muy claro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5a4a48; /* marrón suave */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.perfil-container {
+    background: #fff0f6; /* rosa pastel claro */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(250, 192, 203, 0.4); /* sombra rosa suave */
+    max-width: 450px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.perfil-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: #d85c6a; /* rosa fuerte */
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #a64a5e;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="file"],
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1.8px solid #f4c6d1;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="date"]:focus,
+form input[type="file"]:focus,
+form select:focus {
+    border-color: #d85c6a;
+    outline: none;
+    box-shadow: 0 0 8px rgba(216, 92, 106, 0.4);
+}
+
+form small {
+    color: #a6747a;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+form button[type="submit"] {
+    background-color: #e958b1;
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 12px 20px;
+    margin-top: 25px;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #f572d8;
+}
+
+.boton-dashboard {
+    display: block;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    padding: 10px 20px;
+    background-color: #f7c8d8;
+    color: #7a4955;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+.boton-dashboard:hover {
+    background-color: #d85c6a;
+    color: white;
+}
+
+img {
+    margin-top: 10px;
+    border-radius: 12px;
+    max-width: 120px;
+    display: block;
+}
+
+/* Para que los checkbox y radios se vean ordenados */
+form label input[type="checkbox"],
+form label input[type="radio"] {
+    vertical-align: middle;
+}
+
+/* Ajustes responsive para móvil */
+@media screen and (max-width: 480px) {
+    .perfil-container {
+        padding: 20px;
+        max-width: 95%;
+    }
+}

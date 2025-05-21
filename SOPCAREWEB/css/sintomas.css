@@ -1,0 +1,162 @@
+/* Configuración base */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff9f9;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de header */
+header {
+  background-color: #f7d6eb;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #f6b1d4;
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+/* Botones generales */
+button {
+  background-color: #f87fb2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #f16ba8;
+  transform: scale(1.05);
+}
+
+/* Main */
+main {
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Formularios y contenedores */
+.formulario, .historial {
+  background-color: #fff0f5;
+  border: 2px solid #f6b1d4;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0px 4px 10px rgba(246, 177, 212, 0.2);
+}
+
+/* Títulos */
+h2 {
+  color: #b84791;
+  margin-bottom: 15px;
+}
+
+/* Inputs y textarea */
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Checkboxes */
+.checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.checkboxes label {
+  background-color: #ffe6f0;
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid #f6b1d4;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkboxes label:hover {
+  background-color: #ffd8e8;
+}
+
+.checkboxes input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Lista de síntomas */
+#lista-sintomas {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item-sintoma {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff6fa;
+  border: 1px solid #f6b1d4;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease forwards;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-sintoma:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(246, 177, 212, 0.4);
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  background-color: #ff6b81;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-eliminar:hover {
+  background-color: #ff4757;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Aplicar animación de salida */
+.item-sintoma.fade-out {
+  animation: fadeOut 0.5s ease forwards;
+}
